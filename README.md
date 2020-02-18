@@ -24,11 +24,11 @@ Logs line 1 line 3 and then line 2, the set timeout runs in the background for o
 
   console.log(createPromise(1000))
   ```
-This will log pending since the promise is not tied to anything that can be accessed. If this was captured in a variable, accessing that variable would update the status after the timeout was finished.
+This will log pending since the promise is not tied to anything that can be accessed and has let to be resolved. If this was captured in a variable, accessing that variable would update the status after the timeout was finished.
 
 **3. How do we use our `createPromise` function to log `"After 1 second(s), this promise is resolved."`**
 
-To get the function to log we would have to log the string when the promise is resolved.
+To get the function to log we would have to log the string when the promise is resolved with `.then`.
 
 **4. What does the following code snippet return? What does it log?**
   ```javascript
